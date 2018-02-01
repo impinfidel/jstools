@@ -12,20 +12,20 @@ String.prototype.replaceAll = function (c, r) {
 };
   
 String.prototype.insertAt = function(s, i, c) {
-	return this.substr(0,i) + c + this.substr(i, this.length);
+	return this.substr(0, i) + c + this.substr(i, this.length);
 };
   
 function generateDotVariants (s) {
 	var newS, currentLen,
 		len = s.length,
-		desiLen = 2*len-1,
+		desiLen = (2 * len) - 1,
 		variants = [],
 		insertPos = 1,
 		pos = 1;
 		i = len;
 
 	while (i != desiLen){		
-		newS = s.insertAt(insertPos,'.');
+		newS = s.insertAt(insertPos, '.');
 		insertPos++;
 		variants.push(newS);
 		i = newS.length;
@@ -33,7 +33,7 @@ function generateDotVariants (s) {
 		if (insertPos == len){				
 			do {
 				s = variants[pos-1];
-				insertPos= s && s.lastIndexOf('.')+2;
+				insertPos= s && s.lastIndexOf('.') + 2;
 				len = s && s.length;
 				pos++;
 			} while(insertPos >= len && pos < variants.length)
