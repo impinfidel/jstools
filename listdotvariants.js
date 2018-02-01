@@ -44,9 +44,9 @@ function generateDotVariants (s) {
 };
 
 function listDotVariants (s) {
-  var dotVariants = generateDotVariants(s);
-
-  for(var i = 0; i < dotVariants.length; i++){
-    console.log(dotVariants[i]);
-  }
+	var dotVariants = generateDotVariants(s);
+	
+	for(var i = 0; i < dotVariants.length; i++){
+		console.log(dotVariants[i]);
+	}
 }
