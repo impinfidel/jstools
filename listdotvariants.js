@@ -25,7 +25,7 @@ function generateDotVariants (s) {
 		i = len;
 
 	while (i != desiLen){		
-		newS = insertAt(s,insertPos,'.');
+		newS = s.insertAt(insertPos,'.');
 		insertPos++;
 		variants.push(newS);
 		i = newS.length;
